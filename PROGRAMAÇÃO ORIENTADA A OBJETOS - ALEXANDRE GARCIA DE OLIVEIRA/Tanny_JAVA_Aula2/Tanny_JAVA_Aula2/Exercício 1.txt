@@ -1,0 +1,32 @@
+EXERCÍCIO 01
+Um revolver pode atirar e recarregar
+Ele só conseguirá atirar, se houver munição
+Ele só conseguirá se não extrapolar o numero máximo de munição
+Ele só atira e só recarrega uma munição por vez
+
+a) Quem é a classe? REVOLVER
+b) Quais são os atrinutos? BALAS, PENTE
+c) Quais são os métodos? RECARREGAR, ATIRAR
+d) Programe tudo!
+e) Testar1
+
+EXERCÍCIO 02
+Sabe-se que o IMC é calculado baseando-se no peso e na altura.
+IMC = Peso/(altura*altura)
+O IMC da pessoa pode ser classificado como:
+Até 18 >> Magra
+De 18 até 25 >> saudável
+Acima de 25>> Sobrepeso
+
+Implemente uma classe que possua funcionalidade de mostrar o cálculo do IMC e sua Classificação.
+
+
+T11 - T12
+JAVA só no GIT (MÁXIMO 15 MINUTOS DE APRESENTAÇÃO)
+
+1) Apresentação da 2ª Limnguagem (EM MAX 4 MINUTOS)
+2) Instalação + Hello World
+3) Resolver 2 dos 7 exercícios da lista
+4) NO GIT 2 pastas JAVA + 2ª Linguagem (T11 e T12)
+
+
