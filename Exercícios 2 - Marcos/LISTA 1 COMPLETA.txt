@@ -1,0 +1,846 @@
+LISTA 1 – NADIA
+
+EXERCÍCIO 1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/**************** Lista 1 Algoritmos *******************************/
+
+int main()
+{
+    int a,b, diferenca;
+    printf("Entre com um numero\n");
+    scanf("%d",&a);
+    printf("Entre com outro numero\n");
+    scanf("%d",&b);
+    while (b==a)
+    {
+        printf ("o segundo numero e igual ao primeiro, por favor digite outro numero\n");
+        scanf("%d", &b);
+    }
+    if (a>b)
+    {
+        diferenca = a-b;
+        printf("o valor da diferenca = %d\n", diferenca);
+    }
+    else (b>a);
+    {
+        diferenca = b-a;
+        printf("o valor da diferenca = %d\n", diferenca);
+    }
+    system ("pause");
+}
+
+
+EXERCÍCIO 2
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+/**************** ex2 *******************************/
+
+int main()
+{
+    int a,b,c,soma;
+    printf("entre com um numero entre 0 e 20\n");
+    scanf("%d",&a);
+    while (a<=0 || a>=20)
+    {
+        printf("numero invalido, por favor digite novamente\n");
+        scanf("%d",&a);
+    }
+    printf("entre com um numero negativo\n");
+    scanf("%d",&b);
+    while (b>=0)
+    {
+        printf("numero invalido, por favor digite novamente\n");
+        scanf("%d",&b);
+    }
+    printf("entre com um qualquer\n");
+    scanf("%d",&c);
+    soma = pow(a,2) + pow(b,2) + pow(c,2);
+    printf("o valor da soma dos quadrados dos numeros e = %d\n", soma);
+    while (soma<1000)
+    {
+        printf("valor menor que 1000, entre com 3 novos numeros\n");
+        printf("entre com um numero entre 0 e 20\n");
+    scanf("%d",&a);
+    while (a<=0 || a>=20)
+    {
+        printf("numero invalido, por favor digite novamente\n");
+        scanf("%d",&a);
+    }
+    printf("entre com um numero negativo\n");
+    scanf("%d",&b);
+    while (b>=0)
+    {
+        printf("numero invalido, por favor digite novamente\n");
+        scanf("%d",&b);
+    }
+    printf("entre com um qualquer\n");
+    scanf("%d",&c);
+    soma = pow(a,2) + pow(b,2) + pow(c,2);
+    printf("o valor da soma dos quadrados dos numeros e = %d\n", soma);
+    }
+}
+
+
+
+EXERCÍCIO 2 - LAÇO DE REPETIÇÃO
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+/**************** ex2 *******************************/
+
+int main()
+{
+    int a,b,c,soma;
+    printf("entre com um numero entre 0 e 20\n");
+    scanf("%d",&a);
+    while (a<=0 || a>=20)
+    {
+        printf("numero invalido, por favor digite novamente\n");
+        scanf("%d",&a);
+    }
+    printf("entre com um numero negativo\n");
+    scanf("%d",&b);
+    while (b>=0)
+    {
+        printf("numero invalido, por favor digite novamente\n");
+        scanf("%d",&b);
+    }
+    printf("entre com um qualquer\n");
+    scanf("%d",&c);
+    soma = pow(a,2) + pow(b,2) + pow(c,2);
+    printf("o valor da soma dos quadrados dos numeros e = %d\n", soma);
+    while (soma<1000)
+    {
+        printf("valor menor que 1000, entre com 3 novos numeros\n");
+        printf("entre com um numero entre 0 e 20\n");
+    scanf("%d",&a);
+    while (a<=0 || a>=20)
+    {
+        printf("numero invalido, por favor digite novamente\n");
+        scanf("%d",&a);
+    }
+    printf("entre com um numero negativo\n");
+    scanf("%d",&b);
+    while (b>=0)
+    {
+        printf("numero invalido, por favor digite novamente\n");
+        scanf("%d",&b);
+    }
+    printf("entre com um qualquer\n");
+    scanf("%d",&c);
+    soma = pow(a,2) + pow(b,2) + pow(c,2);
+    printf("o valor da soma dos quadrados dos numeros e = %d\n", soma);
+    }
+}
+
+
+EXERCÍCIO 3
+#include <stdio.h>
+
+/****************** Ex3 ********************/
+
+int main ()
+{
+    int a, b=-1;
+    printf("entre com um numero qualquer\n");
+    scanf("%d",&a);
+    if (a<=0)
+    {
+        a=a*b;
+    }
+    printf("o modulo de seu numero e = %d",a);
+}
+
+
+EXERCÍCIO 4
+
+#include <stdio.h>
+#include <math.h>
+
+/********************* Ex 4 ***********************/
+
+int main()
+{
+    float sal;
+    printf("entre com o valor de seu salario\n");
+    scanf("%f",&sal);
+    if (sal<=0)
+    {
+        printf("valor incorreto, por favor digite novamente o seu salario\n");
+        scanf("%f",&sal);
+    }
+    sal=sal+sal*0.05-sal*0.07;
+
+    printf("o valor de seu salario a receber e = %f",sal);
+}
+
+
+EXERCÍCIO 5
+#include <stdio.h>
+#include <math.h>
+
+/********************* Ex 5 ***********************/
+
+float main()
+{
+    float a,b,c,r,t;
+    printf("valor do deposito\n");
+    scanf("%f",&a);
+    while (a<=0)
+    {
+        printf("valor invalido, digite novamente\n");
+        scanf("%f",&a);
+    }
+    printf("valor da taxa de juros\n");
+    scanf("%f",&b);
+    while (b<0)
+    {
+        printf("valor invalido, digite novamente\n");
+        scanf("%f",&b);
+    }
+    printf("valor do periodo de aplicacao em mes\n");
+    scanf("%f",&c);
+    while (c<0)
+    {
+        printf("valor invalido, digite novamente\n");
+        scanf("%f",&c);
+    }
+    r=a*b*c/100;
+    printf("o valor do rendimento e = %f",r);
+    t=a+r;
+    printf("o valor total depois do rendimento e = %f",t);
+}
+
+VERSÃO 2
+#include <stdio.h>
+#include <math.h>
+
+/********************* Ex 5 ***********************/
+
+float main()
+{
+    float a,b,c,r,t;
+    printf("valor do deposito\n");
+    scanf("%f",&a);
+    while (a<=0)
+    {
+        printf("valor invalido, digite novamente\n");
+        scanf("%f",&a);
+    }
+    printf("valor da taxa de juros\n");
+    scanf("%f",&b);
+    while (b<0)
+    {
+        printf("valor invalido, digite novamente\n");
+        scanf("%f",&b);
+    }
+    printf("valor do periodo de aplicacao em mes\n");
+    scanf("%f",&c);
+    while (c<0)
+    {
+        printf("valor invalido, digite novamente\n");
+        scanf("%f",&c);
+    }
+    r=a*b*c/100;
+    printf("o valor do rendimento e = %f",r);
+    t=a+r;
+    printf("o valor total depois do rendimento e = %f",t);
+}
+
+
+EXERCÍCIO 6
+
+#include <stdio.h>
+#include <math.h>
+
+/********************* Ex 6 ***********************/
+
+int main()
+{
+    int a,b,c;
+    printf("entre com um numero\n");
+    scanf("%d",&a);
+    printf("entre com outro numero\n");
+    scanf("%d",&b);
+    c=a+b;
+    if (c>=10)
+    {
+        c=c+5;
+    }
+    else
+    {
+        c=c-7;
+    }
+    printf("o resuldado e = %d\n",c);
+}
+
+
+EXERCÍCIO 7
+
+#include <stdio.h>
+#include <math.h>
+
+/********************* Ex 7 ***********************/
+
+int main()
+{
+    int a,b,c;
+    printf("entre com o ano de seu nascimento\n");
+    scanf("%d",&a);
+    printf("entre com o ano atual\n");
+    scanf("%d",&b);
+    while (b<a)
+    {
+        printf("ano atual invalido, digite novamente o ano atual\n");
+        scanf("%d",&b);
+    }
+    c=b-a;
+    printf("sua idade atual e =%d\n",c);
+    a=2020-a;
+    printf("sua idade em 2020 sera =%d\n",a);
+}
+
+
+EXERCÍCIO 8
+
+#include <stdio.h>
+#include <math.h>
+
+/********************* Ex 8 ***********************/
+
+int main()
+{
+    int a,b,c;
+    printf("entre com um numero maior que zero\n");
+    scanf("%d",&a);
+    while (a<=0)
+    {
+        printf("numero invalido, por favor digite numero maior que zero\n");
+        scanf("%d",&a);
+    }
+    printf("entre com um numero menor que zero\n");
+    scanf("%d",&b);
+    while (b>=0)
+    {
+        printf("numero invalido, por favor digite numero maior que zero\n");
+        scanf("%d",&b);
+    }
+    c=a*b;
+    printf("o produto dos dois numeros e =%d\n",c);
+
+}
+
+
+EXERCÍCIO 9
+
+#include <stdio.h>
+#include <math.h>
+
+/********************* Ex 9 ***********************/
+
+float main()
+{
+    float a,b,c,d;
+    printf("preco de fabrica do carro\n");
+    scanf("%f",&a);
+    while (a<=0)
+    {
+        printf("valor invalido, repita o valor\n");
+        scanf("%f",&a);
+    }
+    printf("digite percentual de lucro\n");
+    scanf("%f",&b);
+    b=a*b/100;
+    printf("o lucro e =%f\n",b);
+    printf("digite percentual de impostos\n");
+    scanf("%f",&c);
+    c=a*c/100;
+    d=a+b+c;
+    printf("o valor final do carro e =%f\n",d);
+}
+
+
+EXERCÍCIO 10
+#include <stdio.h>
+#include <math.h>
+
+/********************* Ex 10 ***********************/
+
+float main()
+{
+    float a,b,c,d;
+    printf("com um numero maior que 100\n");
+    scanf("%f",&a);
+    while (a<100)
+    {
+        printf("numero menor que 100, repita um numero maior ou igual a 100\n");
+        scanf("%f",&a);
+    }
+    printf("com um outro numero maior que 100\n");
+    scanf("%f",&b);
+    while (b<100)
+    {
+        printf("numero menor que 100, repita um numero maior ou igual a 100\n");
+        scanf("%f",&b);
+    }
+    printf("entre com um numero qualaquer\n");
+    scanf("%f",&c);
+    d=pow(a,2)*pow(b,2)*pow(c,2);
+    printf("o produto de seus quadrados e =%f\n",d);
+}
+
+
+EXERCÍCIO 11
+
+#include <stdio.h>
+#include <math.h>
+
+/******************* Ex 11 *******************/
+
+float main()
+{
+    float a,b;
+    printf("entre com um numero\n");
+    scanf("%f",&a);
+    printf("entre com outro numero\n");
+    scanf("%f",&b);
+    b=b/a;
+    printf("o resultado da divisao do segundo numero pelo primeiro e = %f\n",b);
+}
+
+
+EXERCÍCIO 12
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+/******************* Ex 12 *******************/
+
+float main()
+{
+    float a,b,c,d,e;
+    printf("entre com o valor de seu salario\n");
+    scanf("%f",&a);
+    while (a<=0)
+    {
+        printf("valor invalido, repita o valor de seu salario\n");
+        scanf("%f",&a);
+    }
+    b=a;
+    printf("salario sem reajuste = %f\n",b);
+    if (a<800)
+    {
+        c=a*1.15;
+        printf("salario com reajuste = %f\n",c);
+    }
+    else;
+    if (a>=800 && a<=1000)
+    {
+        d=a*1.10;
+        printf("salario com reajuste = %f\n",d);
+    }
+    else;
+    if (a>1000)
+    {
+        e=a*1.05;
+        printf("salario com reajuste = %f\n",e);
+    }
+    else;
+}
+
+
+EXERCÍCIO 13
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+/******************* Ex 13 *******************/
+
+float main()
+{
+    float a,b,c,d,med;
+    printf("insira as notas do aluno\n");
+    printf("insira a primeira nota\n");
+    scanf("%f",&a);
+    while (a<0 || a>10)
+    {
+        printf("nota invalida, repita o valor da nota de 0 a 10\n");
+        scanf("%f",&a);
+    }
+    printf("insira a segunda nota\n");
+    scanf("%f",&b);
+    while (b<0 || b>10)
+    {
+        printf("nota invalida, repita o valor da nota de 0 a 10\n");
+        scanf("%f",&b);
+    }
+    printf("insira a terceira nota\n");
+    scanf("%f",&c);
+    while (c<0 || c>10)
+    {
+        printf("nota invalida, repita o valor da nota de 0 a 10\n");
+        scanf("%f",&c);
+    }
+    printf("insira a quarta nota\n");
+    scanf("%f",&d);
+    while (d<0 || d>10)
+    {
+        printf("nota invalida, repita o valor da nota de 0 a 10\n");
+        scanf("%f",&d);
+    }
+    med=(a+b+c+d)/4;
+    if (med>=5)
+    {
+        printf("o aluno foi aprovado com media =%f\n",med);
+    }
+    else
+    {
+        printf("o aluno foi reprovado com media =%f\n",med);
+    }
+}
+
+
+EXERCICIO 14
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+/******************* Ex 14 *******************/
+
+int main()
+{
+    int num1,num2,num3,prod;
+    printf("entre com um numero maior que 100\n");
+    scanf("%d",&num1);
+    while (num1<=100)
+    {
+        printf("digitou um numero invalido, repita um numero maior que 100\n");
+        scanf("%d",&num1);
+    }
+    printf("entre com um numero menor que 50\n");
+    scanf("%d",&num2);
+    while (num2>=50)
+    {
+        printf("digitou um numero invalido, repita um numero menor que 50\n");
+        scanf("%d",&num2);
+    }
+    num3=num1+num2;
+    printf("a soma dos dois primeiros numeros e = %d\n",num3);
+    prod=num1*num2*num3;
+    printf("e o produto dos tres numeros e =%d",prod);
+}
+
+
+EXERCÍCO 15
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+/******************* Ex 15 *******************/
+
+float main()
+{
+    float num1,num2,num3,num4,soma;
+
+    do
+    {
+    printf("entre com um numero maior que 10 e menor 25\n");
+    scanf("%f",&num1);
+    while (num1<=10 || num1>=25)
+    {
+        printf("numero invalido, repita um numero maior que 10 e menor que 25\n");
+        scanf("%f",&num1);
+    }
+    printf("entre com outro numero maior ou igual a zero\n");
+    scanf("%f",&num2);
+    while (num2<0)
+    {
+        printf("numero invalido, repita um valor maior ou igual a zero\n");
+        scanf("%f",&num2);
+    }
+    num3=num1+num2;
+    printf("a soma dos dois primeiros numeros e = %f\n",num3);
+    num4=num1*num2*num3;
+    printf("o produto dos tres numeros e = %f\n",num4);
+    soma=pow(num1,2)+pow(num2,2)+pow(num3,2)+pow(num4,2);
+    printf("a soma dos quadrados dos quatro numeros e = %f\n",soma);
+    if (soma<50000)
+    {
+        printf("valor inferior a 50000, insira novos dados\n");
+    }
+    else
+    {
+    printf("parabens resultado superior a 50000\n");
+    }
+    }
+    while (soma<50000);
+
+}
+
+
+EXERCÍCIO 16
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+/******************* Ex 16 *******************/
+
+float main()
+{
+    float a,b,c,x1,x2,delta;
+
+    printf("Entre com um numero diferente de zero para o coeficiente 'a' de uma equacao \nde segundo grau\n");
+    scanf("%f",&a);
+    while (a==0)
+    {
+        printf("Voce digitou zero, por favor digite um numero diferente de zero\n");
+        scanf("%f",&a);
+    }
+    	printf("entre com um numrero para o coeficente 'b' da equacao de segundo grau\n");
+    	scanf("%f",&b);
+    	printf("entre com um numrero para o coeficente 'c' da equacao de segundo grau\n");
+    	scanf("%f",&c);
+   	
+	delta=pow(b,2)-4*a*c;
+   	if (delta<0)
+    	{
+        	printf("A equacao nao possui raizes reais\n");
+    	}
+	else
+    	{
+		if(delta==0)
+		{
+		printf("Delta igual a Zero possui uma unica raiz = %f\n", delta);
+		x1 = (-b+sqrt(delta)/(2*a);
+		printf("Raiz eh igual a: %f.2", x1);
+		}
+			else
+			printf("Delta maior que Zero possui duas raizes reais= %f\n", delta);
+			x1=(-b+sqrt(delta))/(2*a);
+			printf("Raiz 1 eh: %f\n",x1);
+			x2=(-b-sqrt(delta))/(2*a);
+			printf("Raiz 2 eh: %f\n",x2);
+    }
+}
+
+
+EXERCÍCIO 17
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+/******************* Ex 17 *******************/
+
+int main()
+{
+    int a,b,c;
+
+    printf("entre com o valor do lado AB de um triangulo\n");
+    scanf("%d",&a);
+    while (a<=0)
+    {
+        printf("valor invalido, o valor nao pode ser negativo e nem igual a zero\n");
+        scanf("%d",&a);
+    }
+    printf("entre com o valor do lado BC de um triangulo\n");
+    scanf("%d",&b);
+    while (b<=0)
+    {
+        printf("valor invalido, o valor nao pode ser negativo e nem igual a zero\n");
+        scanf("%d",&b);
+    }
+    printf("entre com o valor do lado AC de um triangulo\n");
+    scanf("%d",&c);
+    while (c<=0)
+    {
+        printf("valor invalido, o valor nao pode ser negativo e nem igual a zero\n");
+        scanf("%d",&c);
+    }
+    if ((a<b+c) && (b<a+c) && (c<a+b))
+    {
+        printf("esses valores formam um triangulo\n");
+    if ((a==b)&&(b==c))
+    {
+        printf("trata-se de um triangulo equilatero");
+    }
+    if ((b!=c)&&(a==c)||(a!=c)&&(b==a))
+    {
+        printf("trata-se de um triangulo isosceles\n");
+    }
+    if ((a!=b) && (b!=c) && (a!=c))
+        {
+            printf("trata-se de um triangulo escaleno\n");
+        }
+    }
+    else
+    {
+       printf("esses valores nao formam um triangulo\n");
+    }
+
+}
+
+
+EXERCÍCIO 18
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+/******************* Ex 18 *******************/
+
+float main()
+{
+    float a,b,c,x1,x2,delta;
+
+    do
+    {
+    printf("entre com um numero diferente de zero para o coeficiente 'a' de uma equacao \nde segundo grau\n");
+    scanf("%f",&a);
+    while (a==0)
+    {
+        printf("voce digitou zero, por favor digite um numero diferente de zero\n");
+        scanf("%f",&a);
+    }
+    printf("entre com um numrero para o coeficente 'b' da equacao de segundo grau\n");
+    scanf("%f",&b);
+    printf("entre com um numrero para o coeficente 'c' da equacao de segundo grau\n");
+    scanf("%f",&c);
+    delta=pow(b,2)-4*a*c;
+    if (delta<0)
+    {
+        printf("a equacao nao possui raizes reais DELTA menor que ZERO, entre com novos dados\n");
+    }
+    else
+    {
+        printf("delta = %f\n",delta);
+        x1=(-b+sqrt(delta))/(2*a);
+        x2=(-b-sqrt(delta))/(2*a);
+    }
+
+        if (x1==x2)
+        {
+            printf("as raizes reais x1 e x2 sao iguais = %f\n",x1);
+        }
+        else
+        {
+                printf("as raizes reais sao diferentes\n");
+                printf("x1 = %f\n",x1);
+                printf("x2 = %f\n",x2);
+        }
+    }
+    while (delta<0);
+}
+
+
+EXERCÍCIO 19
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+/******************* Ex 19 *******************/
+
+float main()
+{
+    float alt,peso,h,m;
+    char sexo;
+
+    do
+    {
+    printf("entre com a altura\n");
+    scanf("%f",&alt);
+        if (alt<=0)
+        {
+            printf("altura invalida, digite novamente sua altura\n");
+        }
+    }
+    while (alt<=0);
+    printf("digite a tecla H se voce for homem ou M se for mulher\n");
+    scanf("%s",&sexo);
+    if (sexo == 'h')
+    {
+        printf("Voce escolheu a opcao para o sexo masculino\n");
+        peso=((72*alt)-58);
+        printf("O seu peso ideal e= %f\n",peso);
+    }
+    if (sexo=='m')
+    {
+        printf("Voce escolheu a opcao para o sexo feminino\n");
+        peso=(62.1*alt)-44.7;
+        printf("O seu peso ideal e= %f\n",peso);
+    }
+    getch();
+}
+
+
+EXERCÍCIO 20
+float main()
+{
+    float altura,peso;
+    do
+    {
+        printf("Entre com o valor de seu peso\n");
+        scanf("%f",&peso);
+        if (peso<=0)
+        {
+            printf("valor de peso invalido, repita novamente seu peso\n");
+        }
+    }
+    while (peso<=0);
+    do
+    {
+        printf("Entre com o valor de sua altura\n");
+        scanf("%f",&altura);
+        if (altura<=0)
+        {
+        printf("valor da altura invalido, repita novamente sua altura\n");
+        }
+    }
+    while (altura <=0);
+    if (peso<=60 && altura<1.20)
+    {
+        printf("Sua classificacao e A\n");
+    }
+    if (peso>60 && peso<=90 && altura<1.20)
+    {
+        printf("Sua classificacao e D\n");
+    }
+    if (peso>90 && altura<1.20)
+    {
+        printf("Sua classificacao e G\n");
+    }
+    if (peso<=60 && altura>=1.20 && altura<=1.70)
+    {
+        printf("Sua classificacao e B\n");
+    }
+    if (peso>60 && peso<=90 && altura>=1.20 && altura<=1.70)
+    {
+        printf("Sua classificacao e E\n");
+    }
+    if (peso>90 && altura>=1.20 && altura<=1.70)
+    {
+        printf("Sua classificacao e H\n");
+    }
+     if (peso<=60 && altura>1.70)
+    {
+        printf("Sua classificacao e C\n");
+    }
+    if (peso>60 && peso<=90 && altura>1.70)
+    {
+        printf("Sua classificacao e F\n");
+    }
+    if (peso>90 && altura>1.70)
+    {
+        printf("Sua classificacao e I\n");
+    }
+}
