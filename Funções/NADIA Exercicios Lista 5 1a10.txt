@@ -1,0 +1,407 @@
+#include <stdio.h>
+#include <math.h>
+
+#define ex1
+
+#ifdef ex1
+
+float esfera(float raio);
+
+int main ()
+{
+    float resultado;
+    float raio;
+    printf("\nDigite o valor do raio\n");
+    scanf("%f", &raio);
+
+    resultado = esfera(raio);
+    printf("\nO volume da esfera e' %.2f", resultado);
+}
+
+float esfera(float raio)
+{
+    float volume;
+    volume = (4*3.14*pow(raio,3))/3;
+
+    return volume;
+}
+#endif // ex1
+
+#ifdef ex2
+
+int verifica(int valor);
+
+int main ()
+{
+    int valor;
+    int resultado;
+    printf("\nDigite um valor inteiro\n");
+    scanf("%d", &valor);
+    printf("\nO numero digitado e' %d", valor);
+
+    resultado = verifica(valor);
+    if (resultado ==1){
+        printf("\nO numero e' positivo\n");
+    }
+    else if (resultado == 0){
+        printf("\nO numero digitado e' 0");
+    }
+    else {
+        printf("\nO numero e' negativo");
+    }
+}
+
+int verifica(int valor)
+{
+    int y;
+    if (valor>0){
+        y = 1;
+    }
+    else if (valor ==0)
+    {
+        y=0;
+    }
+    else {
+        y=2;
+    }
+   return y;
+}
+
+#endif // ex2
+
+#ifdef ex3
+
+float divisao(int x, int y);
+
+int main ()
+{
+    int x;
+    int y;
+    
+    printf("\nDigite o primeiro e o segundo numero\n");
+    scanf("%d%d", &x, &y);
+
+    printf("\nO primeiro numero e' %d", x);
+    printf("\nO segundo numero e' %d", y);
+    printf("\nO resultado da divisao do primeiro pelo segundo e' %.2f", divisao(x,y));
+}
+
+float divisao(int x, int y)
+{
+    return x/y;
+}
+
+#endif // ex3
+
+#ifdef ex4
+
+float ReajSalNovo (float salario);
+
+int main()
+{
+    float salario;
+
+    printf("\nDigite o valor do seu salario\n");
+
+    do{
+        scanf("%f", &salario);
+        if (salario<=0){
+            printf("\nValor invalido\n");
+        }
+    } while (salario<=0);
+    
+
+    printf("\nO salario antes de reajuste e' de: %.2f\n", salario);
+
+    printf("\nSalario apos reajuste sera de %.2f\n", ReajSalNovo(salario));
+
+    return 0;
+}
+
+float ReajSalNovo (float salario)
+{
+    if (salario<800){
+        salario = salario*1.15; 
+    } 
+    else if (salario>=800 || salario<=1000){
+        salario = salario*1.10;
+    }
+    else {
+        salario = salario*1.05;
+    }
+
+    return salario;
+}
+
+#endif //ex4
+
+#ifdef ex5
+
+int ParImpar (int x);
+
+int main()
+{
+    int x;
+    int resultado;
+    printf("\nDigite um valor inteiro maior que 0\n");
+    
+    do{
+        scanf("%d", &x);
+        if (x<=0){
+            printf("\nValor incorreto\n");
+        }
+    } while (x<=0);
+
+    resultado = ParImpar(x);
+
+    if (resultado==1){
+        printf("\nO numero e' par\n");
+    }
+    else {
+     printf("\nO numero e' impar\n");   
+    } 
+}
+
+int ParImpar (int x)
+{
+    int y;
+    if (x%2==0){
+        y=1;
+    }
+    else {
+        y=2;
+    }
+    return y;
+}
+
+#endif ex5
+
+#ifdef ex6
+
+float ReajSalNovo (float salario);
+
+int main()
+{
+    float salario;
+    int A[100];
+    int quantidade;
+    int i;
+
+    printf("\nDigite o valor do seu salario\n");
+
+    do{
+        scanf("%f", &salario);
+        if (salario<=0){
+            printf("\nValor invalido\n");
+        }
+    } while (salario<=0);
+
+    printf("\nDigite K numeros que deve ser maior que 0 e menor ou igual a 10\n");
+    do{
+      scanf("%d", &quantidade);  
+      if (quantidade<=0){
+            printf("\nValor invalido\n");
+        }
+    } while (quantidade<=0);
+
+    A[quantidade]= ReajSalNovo(salario); 
+
+    printf("\nSalario apos reajuste sera de\n");   
+
+    for (i=0; i<quantidade; i++){
+        printf("%d", A[i]);
+    }   
+}
+
+float ReajSalNovo (float salario)
+{
+  if (salario<800){
+        salario = salario*1.15; 
+    } 
+    else if (salario>=800 || salario<=1000){
+        salario = salario*1.10;
+    }
+    else {
+        salario = salario*1.05;
+    }
+
+    return salario;  
+}
+
+
+#endif //ex6
+
+#ifdef ex7
+
+float MediaFibonacci(float quantidade);
+
+int main()
+{
+    int quantidade;
+        
+    printf("\nDigite a quantidade de termos desejados\n");
+    do{
+        scanf("%d", &quantidade);
+        if (quantidade<=0){
+            printf("\nNumero invalido\n");
+        } 
+    } while (quantidade<=0);
+
+    printf("\nA media dos termos da sequencia e': %.2f\n", MediaFibonacci(quantidade));
+    
+}    
+
+float MediaFibonacci(float quantidade)
+{
+    int i;
+    int primeiro=0;
+    int segundo =1;
+    int soma=0;
+    float media;
+
+    for (i=0; i<quantidade; i++){
+        proximo= primeiro+segundo;
+        primeiro = segundo;
+        segundo = proximo;
+        total += proximo; 
+    }
+
+    media = soma/quantidade;
+    return media;
+}
+
+#endif ex7
+
+#ifdef ex8
+
+float Delta(float a, float b, float c);
+
+int main()
+{
+    int a;
+    int b;
+    int c;
+    int delt;
+
+    printf("\nDigite os valores de a, b e c da equacao de 2 grau\n");
+
+    do {
+        scanf("%d%d%d", &a, &b, &c);
+        if (a==0){
+            printf("\nValor de a e' invalido\n");
+        }    
+    } while (a==0);
+
+    delt = Delta(a,b,c);
+
+    if (delt>0){
+        printf("\nA equacao possui duas raizes reais e distintas\n");
+    }
+    else if (delt==0){
+        printf("\nA equacao possui duas raizes iguais\n");
+    } else {
+        printf("\nA equacao nao apresenta raizes reais\n");
+    }
+
+}
+
+float Delta(float a, float b, float c)
+{
+    return pow(b,2)-4*a*c;
+}
+
+
+#endif //ex8
+
+#ifdef ex9
+
+int Fatorial(int n);
+
+int main ()
+{
+    int n;
+    
+    printf("\nDigite um numero inteiro maior ou igual a 0\n");
+    do {
+        scanf("%d", &n);
+        if (n<0){
+            printf("\nNumero invalido\n");
+        }
+    } while (n<0);
+
+    printf("\nO fatorial do numero %d e': %d\n", n, Fatorial(n));
+}
+
+int Fatorial(int n)
+{
+    int i;
+    int fact=1;
+
+    for(i=1; i<=n; i++){
+        fact = fact*i;
+    }
+
+    return fact;
+}
+
+#endif //ex9
+
+#ifdef ex10
+
+float TipoTriangulo(float x, float y, float z);
+
+int main()
+{
+    int x, y, z;
+
+    printf("\nDigite tres valores para cada lado do triangulo\n");
+    do {
+        scanf("%d%d%d", &x, &y, &z);            
+    } while (x<y+z || y<x+z || z<x+y);
+    
+    if (TipoTriangulo(x,y,z)==1){
+        printf("\nOs lados de numeros %d, %d e %d representam um triangulo equilatero\n", x,y,z);    
+    }
+    else if (TipoTriangulo(x,y,z)==2){
+        printf("\nOs lados de numeros %d, %d e %d representam um triangulo isosceles\n", x,y,z);   
+    }
+    else {
+        printf("\nOs lados de numeros %d, %d e %d representam um triangulo escaleno\n", x,y,z);
+    }
+    
+}
+
+float TipoTriangulo(float x, float y, float z)
+{
+    int flag;
+    if(x==y && y==z){
+        flag = 1;
+    } 
+    else if(x==y || y==z || z==x){
+        flag = 2;
+    }
+    else {
+        flag = 3;
+    }
+
+    return flag;
+}
+
+#endif // ex10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
